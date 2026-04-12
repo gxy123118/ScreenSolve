@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quickshot"
+version = "0.1.0"
+description = "Global hotkey screenshot tool for Windows."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "mss>=10.1.0",
+  "pynput>=1.8.1",
+  "rapidocr-onnxruntime>=1.4.4",
+  "requests>=2.32.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0",
+]
+
+[project.scripts]
+quickshot = "quickshot.api.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

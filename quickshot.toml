@@ -1,0 +1,19 @@
+# Global hotkey format follows pynput.HotKey.parse syntax.
+# Examples:
+# hotkey = "<ctrl>+<alt>+s"
+# hotkey = "<ctrl>+<shift>+a"
+hotkey = "<ctrl>+<alt>+s"
+
+# Relative paths are resolved from this project root.
+output_dir = "screenshots"
+
+# Pipeline: screenshot file -> local OCR -> GLM text reasoning -> clipboard text.
+ai_enabled = true
+ai_copy_to_clipboard = true
+ai_provider = "glm"
+ai_model = "glm-5.1"
+ai_base_url = "https://open.bigmodel.cn/api/paas/v4"
+# Fill this directly in config if you prefer.
+ai_api_key = "ca476497082c44ed99190cba1f3d1751.AfkQEbgZrHcWWDvh"
+# Fallback only when ai_api_key is empty.
+ai_api_key_env = "ZHIPUAI_API_KEY"

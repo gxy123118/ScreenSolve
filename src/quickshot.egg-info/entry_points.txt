@@ -1,0 +1,2 @@
+[console_scripts]
+quickshot = quickshot.api.cli:main
